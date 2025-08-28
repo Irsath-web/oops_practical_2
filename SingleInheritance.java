@@ -1,19 +1,22 @@
-class Vehicle {
-    void start() {
-        System.out.println("Vehicle is starting...");
+// Parent class
+class Bank {
+    void bankDetails() {
+        System.out.println("This is a National Bank.");
     }
 }
 
-class Car extends Vehicle {
-    void drive() {
-        System.out.println("Car is being driven...");
+// Child class (inherits from Bank)
+class Account extends Bank {
+    void accountType() {
+        System.out.println("This is a Savings Account.");
     }
 }
 
-public class SingleInheritance {
+public class SingleInheritanceBank {
     public static void main(String[] args) {
-        Car c = new Car();
-        c.start();
-        c.drive();
+        Account acc = new Account();
+        acc.bankDetails();   // inherited method
+        acc.accountType();   // child method
     }
 }
+
