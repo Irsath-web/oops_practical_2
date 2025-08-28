@@ -1,26 +1,30 @@
-class Vehicle {
-    void start() {
-        System.out.println("Vehicle is starting...");
+// Base class
+class Employee {
+    void empInfo() {
+        System.out.println("I am an Employee.");
     }
 }
 
-class Car extends Vehicle {
-    void drive() {
-        System.out.println("Car is being driven...");
+// Intermediate class
+class Manager extends Employee {
+    void managerInfo() {
+        System.out.println("I manage the employees.");
     }
 }
 
-class ElectricCar extends Car {
-    void charge() {
-        System.out.println("Electric car is charging...");
+// Derived class
+class Director extends Manager {
+    void directorInfo() {
+        System.out.println("I make company decisions.");
     }
 }
 
-public class MultilevelInheritance {
+public class MultilevelInheritanceEmployee {
     public static void main(String[] args) {
-        ElectricCar ec = new ElectricCar();
-        ec.start();
-        ec.drive();
-        ec.charge();
+        Director d = new Director();
+        d.empInfo();       // from Employee
+        d.managerInfo();   // from Manager
+        d.directorInfo();  // from Director
     }
 }
+
